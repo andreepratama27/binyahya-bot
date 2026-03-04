@@ -124,7 +124,7 @@ function LandingPage() {
 
       {/* Meet the Bots */}
       {/* biome-ignore lint/correctness/useUniqueElementIds: anchor link for same-page scroll */}
-      <section id="meet-the-bots" className="mx-auto max-w-5xl px-6 py-16">
+      <section id="meet-the-bots" className="mx-auto max-w-4xl px-6 py-16">
         <div className="mb-2 flex flex-col items-center">
           <h2 className="text-3xl font-bold text-gray-900">Meet the Bots</h2>
           <svg
@@ -232,6 +232,7 @@ function LandingPage() {
               step={i + 1}
               title={s.title}
               description={s.description}
+              isLast={i === steps.length - 1}
             />
           ))}
         </div>
@@ -239,8 +240,13 @@ function LandingPage() {
 
       {/* Footer */}
       <footer className="border-t border-gray-100 py-8 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} Bin Yahya Bot · Serve our bos,
-        @andreepratama27
+        © {new Date().getFullYear()} Bin Yahya Bot · Serve our bos,&nbsp;
+        <a
+          href="https://linkedin.com/in/andre-pratama27"
+          className="text-gray-400"
+        >
+          @andreepratama27
+        </a>
       </footer>
     </main>
   );
