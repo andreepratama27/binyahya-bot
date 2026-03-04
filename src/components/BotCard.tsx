@@ -2,41 +2,38 @@ interface BotCardProps {
   name: string;
   role: string;
   description: string;
-  location: string;
+  status: "online" | "offline";
+  avatar: string;
   color: "red" | "yellow" | "green";
 }
 
 const colorMap = {
-  red: {
-    bg: "bg-red-50",
-    border: "border-red-200",
-    badge: "bg-red-100 text-red-700",
-    avatar: "bg-red-500",
-  },
-  yellow: {
-    bg: "bg-yellow-50",
-    border: "border-yellow-200",
-    badge: "bg-yellow-100 text-yellow-700",
-    avatar: "bg-yellow-400",
-  },
-  green: {
-    bg: "bg-green-50",
-    border: "border-green-200",
-    badge: "bg-green-100 text-green-700",
-    avatar: "bg-green-500",
-  },
+  red: { bg: "bg-red-50", border: "border-red-200", ring: "ring-red-200" },
+  yellow: { bg: "bg-yellow-50", border: "border-yellow-200", ring: "ring-yellow-200" },
+  green: { bg: "bg-green-50", border: "border-green-200", ring: "ring-green-200" },
 };
 
-export function BotCard({ name, role, description, location, color }: BotCardProps) {
+export function BotCard({ name, role, description, status, avatar, color }: BotCardProps) {
   const c = colorMap[color];
+  const isOnline = status === "online";
+
   return (
     <div className={`relative rounded-2xl border ${c.border} ${c.bg} p-6 shadow-sm`}>
-      <span className={`absolute right-4 top-4 rounded-full px-2.5 py-0.5 text-xs font-medium ${c.badge}`}>
-        {location}
+      <span className={`absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${isOnline ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-400"}`}>
+        <span className="relative flex h-1.5 w-1.5">
+          {isOnline && (
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+          )}
+          <span className={`relative inline-flex h-1.5 w-1.5 rounded-full ${isOnline ? "bg-green-500" : "bg-gray-400"}`} />
+        </span>
+        {isOnline ? "Online" : "Offline"}
       </span>
-      <div className={`mb-4 flex h-14 w-14 items-center justify-center rounded-full ${c.avatar}`}>
-        <span className="text-xl font-bold text-white">{name[0]}</span>
-      </div>
+
+      <img
+        src={avatar}
+        alt={name}
+        className={`mb-4 h-16 w-16 rounded-full object-cover ring-2 ${c.ring}`}
+      />
       <h3 className="mb-1 text-lg font-bold text-gray-900">{name}</h3>
       <p className="mb-2 text-sm font-semibold text-gray-500">{role}</p>
       <p className="text-sm text-gray-600">{description}</p>

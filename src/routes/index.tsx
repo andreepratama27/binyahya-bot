@@ -10,7 +10,8 @@ interface Bot {
   color: "red" | "yellow" | "green";
   role: string;
   description: string;
-  location: string;
+  status: "online" | "offline";
+  avatar: string;
 }
 
 const bots: Bot[] = [
@@ -20,7 +21,8 @@ const bots: Bot[] = [
     role: "Scheduling & Reminders",
     description:
       "Along keeps your calendar in order — setting reminders, managing appointments, and making sure you never miss what matters.",
-    location: "Malaysia",
+    status: "online",
+    avatar: "/avatar/along-avatar.PNG",
   },
   {
     name: "Angah",
@@ -28,7 +30,8 @@ const bots: Bot[] = [
     role: "Research & Information",
     description:
       "Angah digs deep to find answers — retrieving facts, summarising articles, and surfacing the information you need.",
-    location: "Malaysia",
+    status: "offline",
+    avatar: "/avatar/angah-avatar.PNG",
   },
   {
     name: "Alang",
@@ -36,7 +39,8 @@ const bots: Bot[] = [
     role: "Task Management & Productivity",
     description:
       "Alang helps you stay on top of your work — organising tasks, tracking progress, and keeping projects moving forward.",
-    location: "Malaysia",
+    status: "offline",
+    avatar: "/avatar/alang-avatar.PNG",
   },
 ];
 
@@ -102,10 +106,10 @@ function LandingPage() {
           </h1>
           <p className="mx-auto mb-8 max-w-xl text-lg text-sky-100">
             A family of personal AI assistants — built for the Bin Yahya
-            household, powered by OpenClaw.
+            household, powered by OpenClaw 🦞
           </p>
           <img
-            src="/docs/landing-page/image-sample.png"
+            src="/binyahya-family-photo.png"
             alt="Along, Angah, and Alang"
             className="mx-auto mb-8 max-h-64 object-contain drop-shadow-lg"
           />
@@ -121,9 +125,27 @@ function LandingPage() {
       {/* Meet the Bots */}
       {/* biome-ignore lint/correctness/useUniqueElementIds: anchor link for same-page scroll */}
       <section id="meet-the-bots" className="mx-auto max-w-5xl px-6 py-16">
-        <h2 className="mb-2 text-center text-3xl font-bold text-gray-900">
-          Meet the Bots
-        </h2>
+        <div className="mb-2 flex flex-col items-center">
+          <h2 className="text-3xl font-bold text-gray-900">Meet the Bots</h2>
+          <svg
+            aria-hidden="true"
+            className="mt-1 w-48"
+            height="12"
+            viewBox="0 0 200 12"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M2,6 C20,1 55,0 100,3 C145,6 175,1 198,5 C198,8 175,11 130,9 C85,7 40,10 2,8 Z"
+              fill="#0ea5e9"
+              opacity="0.9"
+            />
+            <path
+              d="M10,7 C40,3 80,2 120,5 C155,7 180,4 195,6 C190,9 160,11 120,10 C80,9 35,11 8,9 Z"
+              fill="#bae6fd"
+              opacity="0.6"
+            />
+          </svg>
+        </div>
         <p className="mb-10 text-center text-gray-500">
           Three brothers, three specialities.
         </p>
@@ -137,7 +159,27 @@ function LandingPage() {
       {/* Our History */}
       <section className="bg-gray-50 px-6 py-16">
         <div className="mx-auto max-w-2xl">
-          <h2 className="mb-4 text-3xl font-bold text-gray-900">Our History</h2>
+          <div className="mb-4 flex flex-col">
+            <h2 className="text-3xl font-bold text-gray-900">Our History</h2>
+            <svg
+              aria-hidden="true"
+              className="mt-1 w-40"
+              height="12"
+              viewBox="0 0 200 12"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M2,6 C20,1 55,0 100,3 C145,6 175,1 198,5 C198,8 175,11 130,9 C85,7 40,10 2,8 Z"
+                fill="#0ea5e9"
+                opacity="0.9"
+              />
+              <path
+                d="M10,7 C40,3 80,2 120,5 C155,7 180,4 195,6 C190,9 160,11 120,10 C80,9 35,11 8,9 Z"
+                fill="#bae6fd"
+                opacity="0.6"
+              />
+            </svg>
+          </div>
           <p className="mb-10 text-gray-600">
             Bin Yahya Bot started as a personal experiment — a way to bring AI
             assistance into daily family life. Built on top of OpenClaw, the
@@ -159,9 +201,27 @@ function LandingPage() {
 
       {/* How It Works */}
       <section className="mx-auto max-w-5xl px-6 py-16">
-        <h2 className="mb-2 text-center text-3xl font-bold text-gray-900">
-          How It Works
-        </h2>
+        <div className="mb-2 flex flex-col items-center">
+          <h2 className="text-3xl font-bold text-gray-900">How It Works</h2>
+          <svg
+            aria-hidden="true"
+            className="mt-1 w-44"
+            height="12"
+            viewBox="0 0 200 12"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M2,6 C20,1 55,0 100,3 C145,6 175,1 198,5 C198,8 175,11 130,9 C85,7 40,10 2,8 Z"
+              fill="#0ea5e9"
+              opacity="0.9"
+            />
+            <path
+              d="M10,7 C40,3 80,2 120,5 C155,7 180,4 195,6 C190,9 160,11 120,10 C80,9 35,11 8,9 Z"
+              fill="#bae6fd"
+              opacity="0.6"
+            />
+          </svg>
+        </div>
         <p className="mb-12 text-center text-gray-500">
           Simple by design, powerful under the hood.
         </p>
@@ -179,7 +239,8 @@ function LandingPage() {
 
       {/* Footer */}
       <footer className="border-t border-gray-100 py-8 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} Bin Yahya Bot · Built by @andreepratama27
+        © {new Date().getFullYear()} Bin Yahya Bot · Serve our bos,
+        @andreepratama27
       </footer>
     </main>
   );
