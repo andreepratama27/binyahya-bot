@@ -15,7 +15,7 @@ export function StepItem({ step, title, description, isLast = false }: StepItemP
       <div className="relative z-10 mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-sky-500 text-lg font-bold text-white shadow-md">
         {step}
       </div>
-      <h4 className="mb-1 font-semibold text-gray-900">{title}</h4>
+      <h4 className="mb-1 text-sm font-semibold text-gray-900 sm:text-base">{title}</h4>
       <p className="text-sm text-gray-500">{description}</p>
     </div>
   );

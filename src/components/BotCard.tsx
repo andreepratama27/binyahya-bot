@@ -18,7 +18,7 @@ export function BotCard({ name, role, description, status, avatar, color }: BotC
   const isOnline = status === "online";
 
   return (
-    <div className={`relative rounded-2xl border ${c.border} ${c.bg} p-6 shadow-sm`}>
+    <div className={`relative rounded-2xl border ${c.border} ${c.bg} p-4 shadow-sm sm:p-6`}>
       <span className={`absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${isOnline ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-400"}`}>
         <span className="relative flex h-1.5 w-1.5">
           {isOnline && (
@@ -34,7 +34,7 @@ export function BotCard({ name, role, description, status, avatar, color }: BotC
         alt={name}
         className={`mb-4 h-16 w-16 rounded-full object-cover ring-2 ${c.ring}`}
       />
-      <h3 className="mb-1 text-lg font-bold text-gray-900">{name}</h3>
+      <h3 className="mb-1 text-base font-bold text-gray-900 sm:text-lg">{name}</h3>
       <p className="mb-2 text-sm font-semibold text-gray-500">{role}</p>
       <p className="text-sm text-gray-600">{description}</p>
     </div>

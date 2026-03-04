@@ -83,7 +83,7 @@ function LandingPage() {
   return (
     <main className="min-h-screen bg-white font-[Plus_Jakarta_Sans,sans-serif]">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-sky-500 px-6 py-20 text-center text-white">
+      <section className="relative overflow-hidden bg-sky-500 px-6 py-16 text-center text-white sm:py-24 lg:py-28">
         <div
           className="absolute inset-0"
           style={{
@@ -101,7 +101,7 @@ function LandingPage() {
             Cheras, KL
             <span>🇲🇾</span>
           </span>
-          <h1 className="mb-3 text-5xl font-bold tracking-tight sm:text-6xl">
+          <h1 className="mb-3 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             Bin Yahya's Bot
           </h1>
           <p className="mx-auto mb-8 max-w-xl text-lg text-sky-100">
@@ -111,7 +111,7 @@ function LandingPage() {
           <img
             src="/binyahya-family-photo.png"
             alt="Along, Angah, and Alang"
-            className="mx-auto mb-8 max-h-64 object-contain drop-shadow-lg"
+            className="mx-auto mb-8 w-full max-w-xs object-contain drop-shadow-lg sm:max-w-sm"
           />
           <a
             href="#meet-the-bots"
@@ -126,7 +126,7 @@ function LandingPage() {
       {/* biome-ignore lint/correctness/useUniqueElementIds: anchor link for same-page scroll */}
       <section id="meet-the-bots" className="mx-auto max-w-4xl px-6 py-16">
         <div className="mb-2 flex flex-col items-center">
-          <h2 className="text-3xl font-bold text-gray-900">Meet the Bots</h2>
+          <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Meet the Bots</h2>
           <svg
             aria-hidden="true"
             className="mt-1 w-48"
@@ -160,7 +160,7 @@ function LandingPage() {
       <section className="bg-gray-50 px-6 py-16">
         <div className="mx-auto max-w-2xl">
           <div className="mb-4 flex flex-col">
-            <h2 className="text-3xl font-bold text-gray-900">Our History</h2>
+            <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Our History</h2>
             <svg
               aria-hidden="true"
               className="mt-1 w-40"
@@ -202,7 +202,7 @@ function LandingPage() {
       {/* How It Works */}
       <section className="mx-auto max-w-5xl px-6 py-16">
         <div className="mb-2 flex flex-col items-center">
-          <h2 className="text-3xl font-bold text-gray-900">How It Works</h2>
+          <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">How It Works</h2>
           <svg
             aria-hidden="true"
             className="mt-1 w-44"
@@ -240,13 +240,15 @@ function LandingPage() {
 
       {/* Footer */}
       <footer className="border-t border-gray-100 py-8 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} Bin Yahya Bot · Serve our bos,&nbsp;
-        <a
-          href="https://linkedin.com/in/andre-pratama27"
-          className="text-gray-400"
-        >
-          @andreepratama27
-        </a>
+        <span className="inline-flex flex-wrap justify-center gap-x-1">
+          <span>© {new Date().getFullYear()} Bin Yahya Bot · Serve our bos,</span>
+          <a
+            href="https://linkedin.com/in/andre-pratama27"
+            className="text-gray-400"
+          >
+            @andreepratama27
+          </a>
+        </span>
       </footer>
     </main>
   );
