@@ -12,21 +12,18 @@ const colorMap = {
     border: "border-red-200",
     badge: "bg-red-100 text-red-700",
     avatar: "bg-red-500",
-    initial: "text-white",
   },
   yellow: {
     bg: "bg-yellow-50",
     border: "border-yellow-200",
     badge: "bg-yellow-100 text-yellow-700",
     avatar: "bg-yellow-400",
-    initial: "text-white",
   },
   green: {
     bg: "bg-green-50",
     border: "border-green-200",
     badge: "bg-green-100 text-green-700",
     avatar: "bg-green-500",
-    initial: "text-white",
   },
 };
 
@@ -38,7 +35,7 @@ export function BotCard({ name, role, description, location, color }: BotCardPro
         {location}
       </span>
       <div className={`mb-4 flex h-14 w-14 items-center justify-center rounded-full ${c.avatar}`}>
-        <span className={`text-xl font-bold ${c.initial}`}>{name[0]}</span>
+        <span className="text-xl font-bold text-white">{name[0]}</span>
       </div>
       <h3 className="mb-1 text-lg font-bold text-gray-900">{name}</h3>
       <p className="mb-2 text-sm font-semibold text-gray-500">{role}</p>

@@ -89,6 +89,14 @@ function LandingPage() {
           }}
         />
         <div className="relative">
+          <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-gray-900 px-3 py-1.5 text-xs font-medium text-white shadow-md">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+            </span>
+            Cheras, KL
+            <span>🇲🇾</span>
+          </span>
           <h1 className="mb-3 text-5xl font-bold tracking-tight sm:text-6xl">
             Bin Yahya's Bot
           </h1>
