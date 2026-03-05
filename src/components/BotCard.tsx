@@ -32,6 +32,9 @@ export function BotCard({ name, role, description, status, avatar, color }: BotC
       <img
         src={avatar}
         alt={name}
+        loading="lazy"
+        width={64}
+        height={64}
         className={`mb-4 h-16 w-16 rounded-full object-cover ring-2 ${c.ring}`}
       />
       <h3 className="mb-1 text-base font-bold text-gray-900 sm:text-lg">{name}</h3>

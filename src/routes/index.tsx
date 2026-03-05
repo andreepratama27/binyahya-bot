@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { BotCard } from "../components/BotCard";
 import { TimelineItem } from "../components/TimelineItem";
 import { StepItem } from "../components/StepItem";
+import { SectionUnderline } from "../components/SectionUnderline";
 
 export const Route = createFileRoute("/")({ component: LandingPage });
 
@@ -111,6 +112,8 @@ function LandingPage() {
           <img
             src="/binyahya-family-photo.png"
             alt="Along, Angah, and Alang"
+            width={384}
+            height={384}
             className="mx-auto mb-8 w-full max-w-xs object-contain drop-shadow-lg sm:max-w-sm"
           />
           <a
@@ -127,24 +130,7 @@ function LandingPage() {
       <section id="meet-the-bots" className="mx-auto max-w-4xl px-6 py-16">
         <div className="mb-2 flex flex-col items-center">
           <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Meet the Bots</h2>
-          <svg
-            aria-hidden="true"
-            className="mt-1 w-48"
-            height="12"
-            viewBox="0 0 200 12"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M2,6 C20,1 55,0 100,3 C145,6 175,1 198,5 C198,8 175,11 130,9 C85,7 40,10 2,8 Z"
-              fill="#0ea5e9"
-              opacity="0.9"
-            />
-            <path
-              d="M10,7 C40,3 80,2 120,5 C155,7 180,4 195,6 C190,9 160,11 120,10 C80,9 35,11 8,9 Z"
-              fill="#bae6fd"
-              opacity="0.6"
-            />
-          </svg>
+          <SectionUnderline className="w-48" />
         </div>
         <p className="mb-10 text-center text-gray-500">
           Three brothers, three specialities.
@@ -161,24 +147,7 @@ function LandingPage() {
         <div className="mx-auto max-w-2xl">
           <div className="mb-4 flex flex-col">
             <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Our History</h2>
-            <svg
-              aria-hidden="true"
-              className="mt-1 w-40"
-              height="12"
-              viewBox="0 0 200 12"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M2,6 C20,1 55,0 100,3 C145,6 175,1 198,5 C198,8 175,11 130,9 C85,7 40,10 2,8 Z"
-                fill="#0ea5e9"
-                opacity="0.9"
-              />
-              <path
-                d="M10,7 C40,3 80,2 120,5 C155,7 180,4 195,6 C190,9 160,11 120,10 C80,9 35,11 8,9 Z"
-                fill="#bae6fd"
-                opacity="0.6"
-              />
-            </svg>
+            <SectionUnderline className="w-40" />
           </div>
           <p className="mb-10 text-gray-600">
             Bin Yahya Bot started as a personal experiment — a way to bring AI
@@ -203,24 +172,7 @@ function LandingPage() {
       <section className="mx-auto max-w-5xl px-6 py-16">
         <div className="mb-2 flex flex-col items-center">
           <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">How It Works</h2>
-          <svg
-            aria-hidden="true"
-            className="mt-1 w-44"
-            height="12"
-            viewBox="0 0 200 12"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M2,6 C20,1 55,0 100,3 C145,6 175,1 198,5 C198,8 175,11 130,9 C85,7 40,10 2,8 Z"
-              fill="#0ea5e9"
-              opacity="0.9"
-            />
-            <path
-              d="M10,7 C40,3 80,2 120,5 C155,7 180,4 195,6 C190,9 160,11 120,10 C80,9 35,11 8,9 Z"
-              fill="#bae6fd"
-              opacity="0.6"
-            />
-          </svg>
+          <SectionUnderline className="w-44" />
         </div>
         <p className="mb-12 text-center text-gray-500">
           Simple by design, powerful under the hood.
