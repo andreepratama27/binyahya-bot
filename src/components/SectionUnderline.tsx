@@ -2,7 +2,9 @@ interface SectionUnderlineProps {
   className?: string;
 }
 
-export function SectionUnderline({ className = "w-48" }: SectionUnderlineProps) {
+export function SectionUnderline({
+  className = "w-48",
+}: SectionUnderlineProps) {
   return (
     <svg
       aria-hidden="true"

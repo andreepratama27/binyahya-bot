@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BotCard } from "../components/BotCard";
-import { TimelineItem } from "../components/TimelineItem";
-import { StepItem } from "../components/StepItem";
 import { SectionUnderline } from "../components/SectionUnderline";
+import { StepItem } from "../components/StepItem";
+import { TimelineItem } from "../components/TimelineItem";
 
 export const Route = createFileRoute("/")({ component: LandingPage });
 
@@ -129,7 +129,9 @@ function LandingPage() {
       {/* biome-ignore lint/correctness/useUniqueElementIds: anchor link for same-page scroll */}
       <section id="meet-the-bots" className="mx-auto max-w-4xl px-6 py-16">
         <div className="mb-2 flex flex-col items-center">
-          <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Meet the Bots</h2>
+          <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
+            Meet the Bots
+          </h2>
           <SectionUnderline className="w-48" />
         </div>
         <p className="mb-10 text-center text-gray-500">
@@ -146,7 +148,9 @@ function LandingPage() {
       <section className="bg-gray-50 px-6 py-16">
         <div className="mx-auto max-w-2xl">
           <div className="mb-4 flex flex-col">
-            <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Our History</h2>
+            <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
+              Our History
+            </h2>
             <SectionUnderline className="w-40" />
           </div>
           <p className="mb-10 text-gray-600">
@@ -171,7 +175,9 @@ function LandingPage() {
       {/* How It Works */}
       <section className="mx-auto max-w-5xl px-6 py-16">
         <div className="mb-2 flex flex-col items-center">
-          <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">How It Works</h2>
+          <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
+            How It Works
+          </h2>
           <SectionUnderline className="w-44" />
         </div>
         <p className="mb-12 text-center text-gray-500">
@@ -193,7 +199,9 @@ function LandingPage() {
       {/* Footer */}
       <footer className="border-t border-gray-100 py-8 text-center text-sm text-gray-400">
         <span className="inline-flex flex-wrap justify-center gap-x-1">
-          <span>© {new Date().getFullYear()} Bin Yahya Bot · Serve our bos,</span>
+          <span>
+            © {new Date().getFullYear()} Bin Yahya Bot · Serve our bos,
+          </span>
           <a
             href="https://linkedin.com/in/andre-pratama27"
             className="text-gray-400"
